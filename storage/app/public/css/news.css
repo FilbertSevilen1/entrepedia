@@ -1,0 +1,62 @@
+.headlineContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding:25px;
+    margin: 20px 0px;
+    box-shadow: 2px 2px 4px 2px gray;
+    cursor: pointer;
+    transition: 150ms all ease;
+    background-color: white;
+    border-radius: 20px;
+}
+.headlineContainerCard{
+    width: 38vw;
+    display: flex;
+    flex-direction: column;
+    padding:25px;
+    margin: 40px 0px;
+    box-shadow: 2px 2px 4px 2px gray;
+    cursor: pointer;
+    transition: 150ms all ease;
+    background-color: white;
+    border-radius: 20px;
+}
+.headlineContainer:hover, .headlineContainerCard:hover{
+    transform: scale(1.02);
+}
+.headlineContainer:active, .headlineContainerCard:active{
+    transform: scale(1.00);
+}
+.headlineContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.headlineImage{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+.headlineDescription{
+    width: 80%;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+}
+.headlineDescriptionItem{
+    width: 100%;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+.headlineDescriptionCard{
+    width: 100%;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+    /* background-color: red; */
+}

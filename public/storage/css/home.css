@@ -1,0 +1,20 @@
+.homeContainer{
+    padding-top: 30px;
+    width: 80vw;
+    padding:20px;
+    padding-top:40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 1px gray;
+}
+.homeNewsContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
