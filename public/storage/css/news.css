@@ -11,7 +11,7 @@
     border-radius: 20px;
 }
 .headlineContainerCard{
-    width: 38vw;
+    width: 38%;
     display: flex;
     flex-direction: column;
     padding:25px;
@@ -36,6 +36,7 @@
 .headlineImage{
     width: 200px;
     height: 200px;
+    padding-right: 20px;
     border-radius: 5px;
 }
 .headlineDescription{
