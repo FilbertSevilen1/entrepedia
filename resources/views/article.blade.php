@@ -9,7 +9,6 @@ Home
     <title>Article</title>
 @endsection
 @section('content')
-    @include('component.navbar')
     <div class="bodyContainer">
         <div class="articleContainer">
             <h1 class="textHeader">News Title</h1>
