@@ -11,7 +11,7 @@
     border-radius: 20px;
 }
 .headlineContainerCard{
-    width: 38%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding:25px;
