@@ -28,13 +28,6 @@
         
         </div>
         <div class="navbarRight">
-            {{-- Cuma muncul kalo author --}}
-            <a href="register" class="navbarLeft">
-                <button class="navbarButton">
-                    Register
-                </button>
-            </a>
-
             <a href="login" class="navbarLeft">
                 <button class="navbarButton">
                     Login
