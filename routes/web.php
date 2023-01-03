@@ -24,3 +24,15 @@ Route::get('/search', function () {
 Route::get('/article', function () {
     return view('article');
 });
+
+Route::get('/author', function () {
+    return view('author_home');
+});
+
+Route::get('/add', function () {
+    return view('add_article');
+});
+
+Route::get('/edit', function () {
+    return view('edit_article');
+});
