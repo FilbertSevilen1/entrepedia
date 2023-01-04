@@ -36,3 +36,11 @@ Route::get('/add', function () {
 Route::get('/edit', function () {
     return view('edit_article');
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
