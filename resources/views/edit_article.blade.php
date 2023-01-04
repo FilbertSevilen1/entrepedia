@@ -1,6 +1,6 @@
 @extends('main')
 @section('title')
-    Home
+    Edit
 @endsection
 
 @section('css')
