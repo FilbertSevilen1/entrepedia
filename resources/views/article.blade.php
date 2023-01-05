@@ -1,6 +1,6 @@
 @extends('main')
 @section('title')
-Home
+Article
 @endsection
 
 @section('css')
@@ -11,13 +11,20 @@ Home
 @section('content')
     <div class="bodyContainer">
         <div class="articleContainer">
-            <h1 class="textHeader">News Title</h1>
-            <img src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" class="articleImage">
+            <div class="w-100">
+                <a href="{{ url()->previous() }}"><button type="button" class="btn btn-outline-secondary">❮ Back</button></a>
+                <h1 class="text-center mb-5">{{ $article->title }}</h1>
+            </div>
+            <img src="{{ asset('storage/'.$article->imgurl) }}" class="articleImage">
             <div class="articleAuthor">
-                Created by : Name, DD-MM-YYYY
+                Author : {{ $article->author->name }}<br>
+                Created at: {{ $article->created_at }}
             </div>
             <div class="articleDescription">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ex ea similique aliquam ipsam fuga rerum dolorem, repellat omnis iure. Assumenda laboriosam non necessitatibus doloribus maxime natus ab nisi error.
+                {{ $article->details }}
+            </div>
+            <div class="d-flex justify-content-end w-100 align-items-end">
+                <span class="text-secondary me-5"><i>Last updated: {{ $article->updated_at }}</i></span>
             </div>
         </div>
     </div>

@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/storage/css/main.css">
     <link rel="stylesheet" href="/storage/css/news.css">
-    <title>Document</title>
+    <title>Other</title>
 </head>
 <body>
-    <a href="#">
+    <a href="{{ url('article', ['id' => $article->id]) }}">
         <div class="headlineContainerCard">
-            <h1 class="textHeader">News Name</h1>
+            <h1 class="textHeader">{{ $article->title }}</h1>
             <div class="headlineContent">
                 <div class="headlineDescriptionCard">
-                    <div class="headlineDescriptionItem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam sapiente odit alias iure accusamus beatae fugiat sunt voluptatum maiores nobis deleniti reprehenderit voluptatibus, repellendus, ducimus quo magni, commodi maxime?</div>
+                    <div class="headlineDescriptionItem">{{ $article->details }}</div>
                     <div>
-                    <p>Author : (Name)</p>
-                    <p class="textSmall">Created on DD-MM-YYYY</p>
+                    <p>Author : {{ $article->author->name }}</p>
+                    <p class="textSmall">Created on: {{ $article->created_at }}</p>
                     </div>
                 </div>
             </div>
