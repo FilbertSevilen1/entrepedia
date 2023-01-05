@@ -58,7 +58,7 @@ Login
                 <div class="form-group row">
                     <div class="col-md-6 mb-2">
                             <label>
-                                <a href="#"><button type="button" class="btn btn-link ps-0">Forgot your Password ?</button></a>
+                                <a href="{{ url('register') }}"><button type="button" class="btn btn-link ps-0">Don't have an account ?</button></a>
                             </label>
                     </div>
                 </div>
