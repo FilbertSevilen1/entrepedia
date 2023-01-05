@@ -12,21 +12,25 @@
 
 <body>
     <div class="card" style="width: 18rem;">
-        <img src="https://picsum.photos/id/237/200/300" height="300px" class="card-img-top object-fit-cover"
+        <img src="{{ asset('storage/'.$article->imgurl) }}" height="300px" class="card-img-top object-fit-cover"
             alt="...">
         <div class="card-body">
-            <h5 class="card-title">News Name</h5>
+            <h5 class="card-title">{{ $article->title }}</h5>
             <p class="card-text text-truncate d-block">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, amet
-                debitis earum nemo eius ipsam perferendis officia quasi perspiciatis consequuntur vero veritatis
-                adipisci corrupti culpa at cupiditate sapiente omnis aspernatur.
+                {{ $article->details }}
             </p>
             <p class="card-text text-secondary">
-                Created on DD-MM-YYYY
+                Created on: {{ $article->created_at }}
             </p>
-            <a href="#" class="btn btn-primary text-white">See Details</a>
-            <a href="#" class="btn btn-warning text-white">Edit</a>
-            <a href="#" class="btn btn-danger text-white">Delete</a>
+            <div class="row row-cols-lg-auto g-3 align-items-center">
+                <a href="{{ url('article', ['id' => $article->id]) }}" class="btn btn-primary text-white">See Details</a>
+                <a href="{{ url('edit', ['id' => $article->id]) }}" class="btn btn-warning text-white mx-2">Edit</a>
+                <form action="{{ url('delete') }}"  method="post" class="px-0">
+                    @csrf
+                    <input type="hidden" name="id" value="{{ $article->id }}">
+                    <button type="submit" class="btn btn-danger text-white">Delete</button>
+                </form>
+            </div>
         </div>
     </div>
 </body>

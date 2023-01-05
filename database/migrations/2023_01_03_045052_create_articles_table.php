@@ -15,6 +15,7 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('author_id')->constrained('authors');
             $table->string('title');
             $table->string('details');
             $table->string('imgurl');

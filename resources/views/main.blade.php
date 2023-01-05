@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/storage/css/main.css">
     <link rel="stylesheet" href="/storage/css/home.css">
-    <link rel="stylesheet" href="/storage/css/card.css">
     @yield('css')
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="/storage/image/websiteicon/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="{{ asset('storage/image/websiteicon/logo.png') }}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 Entrepedia
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,31 +22,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                @if (Auth::check() && Auth::user()->role == 'admin')
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('product') }}">Manage Article</a>
-                </li>
-                @endif
             </ul>
             @if (Auth::check())
             <ul class="navbar-nav mx-3">
-                @if (Auth::user()->role == 'user')
-                <li class="nav-item">
-                    {{-- <form action="{{ url('/cart') }}" method="POST">
-                        <button class="nav-link" type="submit"><i class="bi bi-cart2"></i></button>
-                    </form> --}}
-                    <a class="nav-link" href="{{ url('/cart') }}" class="dropdown-item"><i class="bi bi-cart2"></i></a>
-                </li>
-                @endif
                 <li class="nav-item dropdown dropstart">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ Auth::user()->username }}
+                        {{ Auth::user()->name }}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ url('/profile') }}" class="dropdown-item">Profile</a></li>
-                        @if (Auth::user()->role == 'user')
-                        <li><a href="{{ url('/history') }}" class="dropdown-item">Order History</a></li>
-                        @endif
+                        <li><a href="{{ url('/author') }}" class="dropdown-item">My Article</a></li>
                         <li>
                             <form action="{{ url('/logout') }}" method="POST">
                             @csrf
