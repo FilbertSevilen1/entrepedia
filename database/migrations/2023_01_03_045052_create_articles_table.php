@@ -17,7 +17,7 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->foreignId('author_id')->constrained('authors');
             $table->string('title');
-            $table->string('details');
+            $table->string('details',10000);
             $table->string('imgurl');
             $table->timestamps();
         });
