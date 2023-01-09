@@ -88,6 +88,6 @@ class ArticleController extends Controller
         $article->delete();
 
         //redirect
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Article successfully deleted!');
     }
 }
