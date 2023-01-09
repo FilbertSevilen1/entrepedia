@@ -25,14 +25,12 @@
             <div class="row row-cols-lg-auto g-3 align-items-center">
                 <a href="{{ url('article', ['id' => $article->id]) }}" class="btn btn-primary text-white">See Details</a>
                 <a href="{{ url('edit', ['id' => $article->id]) }}" class="btn btn-warning text-white mx-2">Edit</a>
-                <form action="{{ url('delete') }}"  method="post" class="px-0">
-                    @csrf
-                    <input type="hidden" name="id" value="{{ $article->id }}">
-                    <button type="submit" class="btn btn-danger text-white">Delete</button>
-                </form>
+                <button type="button" class="btn btn-danger text-white" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $article->id }}">Delete</button>
             </div>
         </div>
     </div>
 </body>
+
+@include('component.delete_modal')
 
 </html>
